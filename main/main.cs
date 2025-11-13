@@ -7,6 +7,11 @@ class SAE11
     {
         
     }
+    
+    struct reservation
+    {
+        public 
+    }
     static void Main()
     {
         int choix; string liaison;
@@ -43,6 +48,5 @@ class SAE11
                 Console.WriteLine("Choix invalide !");
                 break;
         }
-
     }
 }
