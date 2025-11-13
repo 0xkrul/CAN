@@ -1,10 +1,66 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="css/variables.min.css">
+    <link rel="stylesheet" href="css/components.min.css">
 </head>
 <body>
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline id="bgVideo">
+        <source src="media/background.mp4" type="video/mp4">
+    </video>
 
+    <!-- Blur Overlay -->
+    <div class="blur-overlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="media/logo.png" alt="Logo">
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="menu" id="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Bottom Left Content -->
+    <div class="bottom-content">
+        <p class="text-content">Discover a new way to experience excellence</p>
+        <div class="button-group">
+            <button class="btn btn-primary">Get Started</button>
+            <button class="btn btn-secondary">Learn More</button>
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                menu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
