@@ -9,7 +9,7 @@ class SAE11
     }
     static void Main()
     {
-        int choix; string liaison
+        int choix; string liaison;
 
         Console.WriteLine("=== Choisissez un itinéraire ===");
         Console.WriteLine("1 - Lorient → Groix");
