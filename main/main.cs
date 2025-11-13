@@ -5,7 +5,19 @@ class SAE11
 {
     struct traversee
     {
+        public string liaison;
+        public string nom;
+        public string date;
+        public string heure;
         
+        public traversee(iti, nm, d, hr)
+        {
+            iti = liaison;
+            nm = nom;
+            d = date;
+            hr = heure;
+        }
+
     }
     
     struct reservation
@@ -23,7 +35,7 @@ class SAE11
         Console.WriteLine("4 - Le Palais → Quiberon");
         Console.WriteLine();
 
-        Console.WriteLine("Choisissez le numéro de votre itinéraire");
+        Console.Write("Choisissez le numéro de votre itinéraire : ");
         choix = int.Parse(Console.ReadLine());
 
         switch(choix)
@@ -41,8 +53,8 @@ class SAE11
                 liaison = "Quiberon-Le Palais";
                 break;
             case 4:
-                 Console.WriteLine("Vous avez choisi : Le Palais → Quiberon");
-                 liaison = "Le Palais-Quiberon";
+                Console.WriteLine("Vous avez choisi : Le Palais → Quiberon");
+                liaison = "Le Palais-Quiberon";
                 break;
             default:
                 Console.WriteLine("Choix invalide !");
