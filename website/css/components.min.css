@@ -1,9 +1,11 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Playfair Display', serif;
     overflow-x: hidden;
     color: var(--primary);
     height: 100vh;
-    position: relative
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
 }
 
 #bgVideo {
@@ -38,7 +40,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 3rem;
+    padding: 3rem 4rem;
     z-index: 100
 }
 
@@ -53,6 +55,8 @@ header {
     width: auto;
     display: block;
     filter: drop-shadow(1px 1px 2px #000000);
+    pointer-events: none;
+    -webkit-user-drag: none
 }
 
 .hamburger {
@@ -62,6 +66,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
+    filter: drop-shadow(1px 1px 2px #000000);
     z-index: 101
 }
 
@@ -94,7 +99,7 @@ header {
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
-    padding: 6rem 2rem 2rem;
+    padding: 11rem 2rem 2rem;
     gap: 2rem;
     transition: var(--transition);
     border-left: solid 1.5px var(--primary);
@@ -108,8 +113,12 @@ header {
 .menu a {
     color: var(--primary);
     text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
     font-size: 1.2rem;
-    transition: var(--transition)
+    transition: var(--transition);
+    cursor: pointer;
+    pointer-events: auto
 }
 
 .menu a:hover {
@@ -119,16 +128,19 @@ header {
 
 .bottom-content {
     position: fixed;
-    bottom: 3rem;
-    left: 3rem;
+    bottom: 100px;
+    left: 80px;
+    max-width: 550px;
     z-index: 10
 }
 
 .text-content {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
     font-weight: 300;
-    max-width: 400px
+    max-width: 400px;
+    line-height: 1.4;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .button-group {
@@ -143,28 +155,24 @@ header {
     font-size: 1rem;
     cursor: pointer;
     transition: var(--transition);
-    font-weight: 500
+    font-weight: 600;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    min-width: 120px;
+    width: 300px;
+    height: 60px;
+    font-family: 'Inter', sans-serif
 }
 
 .btn-primary {
     background: var(--primary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     color: #000
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3)
-}
-
-.btn-secondary {
-    background: transparent;
-    color: var(--primary);
-    border: 1px solid var(--primary)
-}
-
-.btn-secondary:hover {
-    background: var(--primary);
-    color: #000
 }
 
 @media(max-width:768px) {
