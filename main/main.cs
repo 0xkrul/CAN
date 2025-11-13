@@ -5,7 +5,19 @@ class SAE11
 {
     struct traversee
     {
+        public string liaison;
+        public string nom;
+        public string date;
+        public string heure;
         
+        public traversee(iti, nm, d, hr)
+        {
+            iti = liaison;
+            nm = nom;
+            d = date;
+            hr = heure;
+        }
+
     }
     static void Main()
     {
