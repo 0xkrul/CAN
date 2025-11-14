@@ -1,5 +1,5 @@
 body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair', serif;
     overflow-x: hidden;
     color: var(--primary);
     height: 100vh;
@@ -40,8 +40,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 4rem;
-    z-index: 100
+    padding: 3rem 5.3rem;
+    z-index: 100;
 }
 
 .logo {
@@ -93,18 +93,18 @@ header {
 .menu {
     position: fixed;
     top: 0;
-    right: -300px;
-    width: 300px;
+    right: -390px;
+    width: 390px;
     height: 100vh;
     background: rgba(0, 0, 0, 0);
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
-    padding: 11rem 2rem 2rem;
+    padding: 12rem 2rem 2rem;
     gap: 2rem;
     transition: var(--transition);
     border-left: solid 1.5px var(--primary);
-    z-index: 99
+    z-index: 99;
 }
 
 .menu.active {
@@ -114,9 +114,9 @@ header {
 .menu a {
     color: var(--primary);
     text-decoration: none;
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 550;
+    font-size: 1.8rem;
     transition: var(--transition);
     cursor: pointer;
     pointer-events: auto
@@ -124,13 +124,13 @@ header {
 
 .menu a:hover {
     color: var(--secondary);
-    transform: translateX(10px)
+    transform: translateX(20px)
 }
 
 .bottom-content {
     position: fixed;
     bottom: 100px;
-    left: 80px;
+    left: 100px;
     max-width: 550px;
     z-index: 10
 }
@@ -138,7 +138,7 @@ header {
 .text-content {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    font-weight: 300;
+    font-weight: 00;
     max-width: 400px;
     line-height: 1.4;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
@@ -162,7 +162,7 @@ header {
     min-width: 120px;
     width: 300px;
     height: 60px;
-    font-family: 'Inter', sans-serif
+    font-family: 'Lato', sans-serif
 }
 
 .btn-primary {
