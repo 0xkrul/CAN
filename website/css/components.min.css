@@ -51,23 +51,24 @@ header {
 }
 
 .logo img {
-    height: 80px;
+    height: 100px;
     width: auto;
     display: block;
     filter: drop-shadow(1px 1px 2px #000000);
     pointer-events: none;
-    -webkit-user-drag: none
+    -webkit-user-drag: none;
 }
 
 .hamburger {
-    width: 30px;
-    height: 24px;
+    width: 40px;
+    height: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
     filter: drop-shadow(1px 1px 2px #000000);
-    z-index: 101
+    z-index: 101;
+
 }
 
 .hamburger span {
