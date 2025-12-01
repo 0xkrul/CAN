@@ -1,0 +1,17 @@
+:root {
+  --primary: #fff;
+  --secondary: #f0f0f0;
+  --black: #000000;
+  --bg-overlay: rgba(0, 0, 0, 0.3);
+  --transition: 0.3s ease
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none
+}

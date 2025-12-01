@@ -1,10 +1,53 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$ CAN</title>
+    <link rel="icon" href="media/logo.png" height="32" width="100">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.min.css">
+    <link rel="stylesheet" href="css/components.min.css">
 </head>
-<body>
 
+<body>
+    <video autoplay muted loop playsinline id="bgVideo">
+        <source src="media/background.mp4" type="video/mp4">
+    </video>
+
+    <div class="blur-overlay"></div>
+
+    <header>
+        <div class="logo">
+            <img src="media/logo.png" alt="Logo">
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <nav class="menu" id="menu">
+        <a href="#home">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="bottom-content">
+        <p class="text-content">Réservez vos billets en quelques clics.</p>
+        <div class="button-group">
+            <button class="btn btn-primary">ACHETER UN BILLET</button>
+            <button class="btn btn-primary">DISPONIBILITÉS</button>
+        </div>
+    </div>
+
+    <script src="js/main.min.js"></script>
 </body>
+
 </html>
