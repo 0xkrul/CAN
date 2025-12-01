@@ -3,7 +3,7 @@
   --secondary: #f0f0f0;
   --black: #000000;
   --bg-overlay: rgba(0, 0, 0, 0.3);
-  --transition: 0.3s ease
+  --transition: 0.5s ease
 }
 
 * {

@@ -42,8 +42,47 @@
     <div class="bottom-content">
         <p class="text-content">Réservez vos billets en quelques clics.</p>
         <div class="button-group">
-            <button class="btn btn-primary">ACHETER UN BILLET</button>
-            <button class="btn btn-primary">DISPONIBILITÉS</button>
+            <button class="btn btn-primary" id="btnAcheter">ACHETER UN BILLET</button>
+            <button class="btn btn-primary" id="btnDisponibilites">DISPONIBILITÉS</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlayAcheter">
+        <div class="overlay-backdrop"></div>
+        <div class="overlay-content">
+            <button class="overlay-close" id="closeAcheter">&times;</button>
+            <h2>Acheter un Billet</h2>
+            <p class="overlay-description">Téléchargez notre application pour acheter vos billets de ferry en toute simplicité.</p>
+            <a href="../main/production.exe" download class="btn btn-primary btn-download">
+                <span class="download-icon">⬇</span>
+                Télécharger l'application
+            </a>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlayDisponibilites">
+        <div class="overlay-backdrop"></div>
+        <div class="overlay-content overlay-schedule">
+            <button class="overlay-close" id="closeDisponibilites">&times;</button>
+            <h2>Horaires des Traversées</h2>
+            <p class="overlay-description">2025</p>
+            
+            <div class="route-selector">
+                <button class="route-btn active" data-route="lorient-groix">Lorient → Groix</button>
+                <button class="route-btn" data-route="groix-lorient">Groix → Lorient</button>
+                <button class="route-btn" data-route="quiberon-palais">Quiberon → Le Palais</button>
+                <button class="route-btn" data-route="palais-quiberon">Le Palais → Quiberon</button>
+            </div>
+
+            <div class="day-selector">
+                <button class="day-nav" id="prevDay">‹</button>
+                <span class="current-day" id="currentDay">1</span>
+                <span class="day-label">Décembre</span>
+                <button class="day-nav" id="nextDay">›</button>
+            </div>
+
+            <div class="schedule-times" id="scheduleTimes">
+            </div>
         </div>
     </div>
 
