@@ -23,7 +23,7 @@
 
     <header>
         <div class="logo">
-            <img src="media/logo.png" alt="Logo">
+            <a href="index.html"><img src="media/logo.png" alt="Logo"></a>
         </div>
         <div class="hamburger" id="hamburger">
             <span></span>
@@ -37,6 +37,7 @@
         <a href="#about">À propos</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
+        <a href="#tickets" id="menuTickets">Mes Billets</a>
     </nav>
 
     <div class="bottom-content">
@@ -53,7 +54,7 @@
             <button class="overlay-close" id="closeAcheter">&times;</button>
             <h2>Acheter un Billet</h2>
             <p class="overlay-description">Téléchargez notre application pour acheter vos billets de ferry en toute simplicité.</p>
-            <a href="../main/production.exe" download class="btn btn-primary btn-download">
+            <a href="../main/CAN.exe" download class="btn btn-primary btn-download">
                 <span class="download-icon">⬇</span>
                 Télécharger l'application
             </a>
@@ -77,11 +78,58 @@
             <div class="day-selector">
                 <button class="day-nav" id="prevDay">‹</button>
                 <span class="current-day" id="currentDay">1</span>
-                <span class="day-label">Décembre</span>
+                <span class="day-label">Novembre</span>
                 <button class="day-nav" id="nextDay">›</button>
             </div>
 
             <div class="schedule-times" id="scheduleTimes">
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay: Mes Billets -->
+    <div class="overlay" id="overlayTickets">
+        <div class="overlay-backdrop"></div>
+        <div class="overlay-content overlay-tickets">
+            <button class="overlay-close" id="closeTickets">&times;</button>
+            <h2>Mes Billets</h2>
+            <p class="overlay-description">Entrez votre ID de réservation pour consulter vos billets</p>
+            
+            <div class="reservation-input-zone" id="reservationInputZone">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="reservationIdInput" 
+                        class="reservation-id-input" 
+                        placeholder="Ex: ABC123DEF"
+                        autocomplete="off"
+                    >
+                    <button class="btn btn-primary btn-search" id="btnSearchReservation">
+                        Rechercher
+                    </button>
+                </div>
+                <p class="input-hint">Saisissez l'identifiant reçu lors de votre réservation</p>
+            </div>
+
+            <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+                <div class="spinner"></div>
+                <p>Chargement de votre réservation...</p>
+            </div>
+
+            <div class="tickets-display" id="ticketsDisplay" style="display: none;">
+                <div class="tickets-header">
+                    <h3 id="reservationName">Réservation</h3>
+                    <button class="btn-reload" id="btnReload">Nouvelle recherche</button>
+                </div>
+                <div class="reservation-info" id="reservationInfo">
+                    <!-- Reservation details will be populated by JS -->
+                </div>
+            </div>
+
+            <div class="error-message" id="errorMessage" style="display: none;">
+                <span class="error-icon">⚠</span>
+                <p id="errorText">Réservation introuvable</p>
+                <button class="btn-reload" id="btnRetry">Réessayer</button>
             </div>
         </div>
     </div>
