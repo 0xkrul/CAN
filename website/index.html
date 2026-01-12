@@ -19,82 +19,118 @@
         <source src="media/background.mp4" type="video/mp4">
     </video>
 
-    <div class="blur-overlay"></div>
+    <aside class="blur-overlay" aria-hidden="true"></aside>
 
     <header>
         <div class="logo">
             <a href="index.html"><img src="media/logo.png" alt="Logo"></a>
         </div>
-        <div class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
     </header>
 
-    <nav class="menu" id="menu">
-        <a href="#home">Accueil</a>
-        <a href="#about">À propos</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+    <nav class="menu" id="menu" aria-label="Main navigation">
+        <a href="index.html">Accueil</a>
+        <a href="#about" id="menuAbout">À propos</a>
+        <a href="#services" id="menuServices">Services</a>
+        <a href="#contact" id="menuContact">Contact</a>
         <a href="#tickets" id="menuTickets">Mes Billets</a>
     </nav>
 
-    <div class="bottom-content">
+    <main class="bottom-content">
         <p class="text-content">Réservez vos billets en quelques clics.</p>
-        <div class="button-group">
+        <section class="button-group">
             <button class="btn btn-primary" id="btnAcheter">ACHETER UN BILLET</button>
             <button class="btn btn-primary" id="btnDisponibilites">DISPONIBILITÉS</button>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <div class="overlay" id="overlayAcheter">
-        <div class="overlay-backdrop"></div>
-        <div class="overlay-content">
-            <button class="overlay-close" id="closeAcheter">&times;</button>
-            <h2>Acheter un Billet</h2>
+    <aside class="overlay" id="overlayAcheter" role="dialog" aria-labelledby="acheterTitle" aria-modal="true">
+        <div class="overlay-backdrop" aria-hidden="true"></div>
+        <article class="overlay-content">
+            <button class="overlay-close" id="closeAcheter" aria-label="Fermer">&times;</button>
+            <h2 id="acheterTitle">Acheter un Billet</h2>
             <p class="overlay-description">Téléchargez notre application pour acheter vos billets de ferry en toute simplicité.</p>
             <a href="../main/CAN.exe" download class="btn btn-primary btn-download">
-                <span class="download-icon">⬇</span>
+                <span class="download-icon" aria-hidden="true">⬇</span>
                 Télécharger l'application
             </a>
-        </div>
-    </div>
+        </article>
+    </aside>
 
-    <div class="overlay" id="overlayDisponibilites">
-        <div class="overlay-backdrop"></div>
-        <div class="overlay-content overlay-schedule">
-            <button class="overlay-close" id="closeDisponibilites">&times;</button>
-            <h2>Horaires des Traversées</h2>
+    <aside class="overlay" id="overlayAbout" role="dialog" aria-labelledby="aboutTitle" aria-modal="true">
+        <div class="overlay-backdrop" aria-hidden="true"></div>
+        <article class="overlay-content">
+            <button class="overlay-close" id="closeAbout" aria-label="Fermer">&times;</button>
+            <h2 id="aboutTitle">À propos de CAN</h2>
+            <p class="overlay-description">CAN (Compagnie Atlantique de Navigation) est une entreprise fictive spécialisée dans le transport maritime de passagers et de véhicules le long des côtes bretonnes. Depuis sa création imaginaire en 1985, nous assurons des liaisons régulières entre le continent et les îles du Morbihan.</p>
+            <p class="overlay-description">Notre flotte comprend plusieurs navires modernes capables de transporter jusqu'à 400 passagers et 80 véhicules par traversée. Nous nous engageons à fournir un service fiable, sûr et confortable pour tous nos clients.</p>
+            <p class="overlay-description">Nos destinations principales incluent Groix, Belle-Île-en-Mer, et d'autres îles magnifiques de la région.</p>
+        </article>
+    </aside>
+
+    <aside class="overlay" id="overlayServices" role="dialog" aria-labelledby="servicesTitle" aria-modal="true">
+        <div class="overlay-backdrop" aria-hidden="true"></div>
+        <article class="overlay-content">
+            <button class="overlay-close" id="closeServices" aria-label="Fermer">&times;</button>
+            <h2 id="servicesTitle">Nos Services</h2>
+            <p class="overlay-description"><strong>Transport de passagers</strong><br>Profitez d'un voyage confortable avec nos sièges ergonomiques et nos espaces panoramiques.</p>
+            <p class="overlay-description"><strong>Transport de véhicules</strong><br>Embarquez votre voiture, moto, vélo ou camping-car en toute sécurité.</p>
+            <p class="overlay-description"><strong>Services à bord</strong><br>Bar, restauration rapide, boutique souvenirs et connexion Wi-Fi gratuite.</p>
+            <p class="overlay-description"><strong>Accessibilité</strong><br>Tous nos navires sont équipés pour accueillir les personnes à mobilité réduite.</p>
+            <p class="overlay-description"><strong>Réservation en ligne</strong><br>Réservez vos billets 24h/24 via notre application dédiée.</p>
+        </article>
+    </aside>
+
+    <aside class="overlay" id="overlayContact" role="dialog" aria-labelledby="contactTitle" aria-modal="true">
+        <div class="overlay-backdrop" aria-hidden="true"></div>
+        <article class="overlay-content">
+            <button class="overlay-close" id="closeContact" aria-label="Fermer">&times;</button>
+            <h2 id="contactTitle">Contact</h2>
+            <p class="overlay-description">Pour toute question ou demande d'information, n'hésitez pas à nous contacter :</p>
+            <p class="overlay-description"><strong>Email :</strong><br><a href="mailto:placeholder@can" style="color: var(--primary); text-decoration: underline;">placeholder@can</a></p>
+            <p class="overlay-description"><strong>Téléphone :</strong><br>+33 (0)2 97 00 00 00</p>
+            <p class="overlay-description"><strong>Adresse :</strong><br>Port de Lorient<br>56100 Lorient, France</p>
+        </article>
+    </aside>
+
+    <aside class="overlay" id="overlayDisponibilites" role="dialog" aria-labelledby="disponibilitesTitle" aria-modal="true">
+        <div class="overlay-backdrop" aria-hidden="true"></div>
+        <article class="overlay-content overlay-schedule">
+            <button class="overlay-close" id="closeDisponibilites" aria-label="Fermer">&times;</button>
+            <h2 id="disponibilitesTitle">Horaires des Traversées</h2>
             <p class="overlay-description">2025</p>
             
-            <div class="route-selector">
-                <button class="route-btn active" data-route="lorient-groix">Lorient → Groix</button>
-                <button class="route-btn" data-route="groix-lorient">Groix → Lorient</button>
-                <button class="route-btn" data-route="quiberon-palais">Quiberon → Le Palais</button>
-                <button class="route-btn" data-route="palais-quiberon">Le Palais → Quiberon</button>
-            </div>
+            <nav class="route-selector" aria-label="Route selection">
+                <button class="route-btn active" data-route="lorient-groix" aria-pressed="true">Lorient → Groix</button>
+                <button class="route-btn" data-route="groix-lorient" aria-pressed="false">Groix → Lorient</button>
+                <button class="route-btn" data-route="quiberon-palais" aria-pressed="false">Quiberon → Le Palais</button>
+                <button class="route-btn" data-route="palais-quiberon" aria-pressed="false">Le Palais → Quiberon</button>
+            </nav>
 
-            <div class="day-selector">
-                <button class="day-nav" id="prevDay">‹</button>
-                <span class="current-day" id="currentDay">1</span>
+            <nav class="day-selector" aria-label="Day selection">
+                <button class="day-nav" id="prevDay" aria-label="Jour précédent">‹</button>
+                <span class="current-day" id="currentDay" aria-live="polite">1</span>
                 <span class="day-label">Novembre</span>
-                <button class="day-nav" id="nextDay">›</button>
-            </div>
+                <button class="day-nav" id="nextDay" aria-label="Jour suivant">›</button>
+            </nav>
 
-            <div class="schedule-times" id="scheduleTimes">
-            </div>
-        </div>
-    </div>
+            <section class="schedule-times" id="scheduleTimes" aria-live="polite">
+            </section>
+        </article>
+    </aside>
 
-    <div class="overlay" id="overlayTickets">
-        <div class="overlay-backdrop"></div>
-        <div class="overlay-content overlay-tickets">
-            <button class="overlay-close" id="closeTickets">&times;</button>
-            <h2>Mes Billets</h2>
+    <aside class="overlay" id="overlayTickets" role="dialog" aria-labelledby="ticketsTitle" aria-modal="true">
+        <div class="overlay-backdrop" aria-hidden="true"></div>
+        <article class="overlay-content overlay-tickets">
+            <button class="overlay-close" id="closeTickets" aria-label="Fermer">&times;</button>
+            <h2 id="ticketsTitle">Mes Billets</h2>
             <p class="overlay-description">Entrez votre ID de réservation pour consulter vos billets</p>
             
-            <div class="reservation-input-zone" id="reservationInputZone">
+            <form class="reservation-input-zone" id="reservationInputZone">
                 <div class="input-group">
                     <input 
                         type="text" 
@@ -102,35 +138,36 @@
                         class="reservation-id-input" 
                         placeholder="Ex: ABC123DEF"
                         autocomplete="off"
+                        aria-label="ID de réservation"
                     >
-                    <button class="btn btn-primary btn-search" id="btnSearchReservation">
+                    <button class="btn btn-primary btn-search" id="btnSearchReservation" type="submit">
                         Rechercher
                     </button>
                 </div>
                 <p class="input-hint">Saisissez l'identifiant reçu lors de votre réservation</p>
-            </div>
+            </form>
 
-            <div class="loading-spinner" id="loadingSpinner" style="display: none;">
-                <div class="spinner"></div>
+            <aside class="loading-spinner" id="loadingSpinner" style="display: none;" aria-live="polite" aria-busy="true">
+                <div class="spinner" aria-hidden="true"></div>
                 <p>Chargement de votre réservation...</p>
-            </div>
+            </aside>
 
-            <div class="tickets-display" id="ticketsDisplay" style="display: none;">
-                <div class="tickets-header">
+            <section class="tickets-display" id="ticketsDisplay" style="display: none;">
+                <header class="tickets-header">
                     <h3 id="reservationName">Réservation</h3>
                     <button class="btn-reload" id="btnReload">Nouvelle recherche</button>
-                </div>
-                <div class="reservation-info" id="reservationInfo">
-                </div>
-            </div>
+                </header>
+                <section class="reservation-info" id="reservationInfo">
+                </section>
+            </section>
 
-            <div class="error-message" id="errorMessage" style="display: none;">
-                <span class="error-icon">⚠</span>
+            <aside class="error-message" id="errorMessage" style="display: none;" role="alert">
+                <span class="error-icon" aria-hidden="true">⚠</span>
                 <p id="errorText">Réservation introuvable</p>
                 <button class="btn-reload" id="btnRetry">Réessayer</button>
-            </div>
-        </div>
-    </div>
+            </aside>
+        </article>
+    </aside>
 
     <script src="js/main.min.js"></script>
 </body>
