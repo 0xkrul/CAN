@@ -38,6 +38,8 @@
         <a href="#services" id="menuServices">Services</a>
         <a href="#contact" id="menuContact">Contact</a>
         <a href="#tickets" id="menuTickets">Mes Billets</a>
+        <a href="#facture" id="menuFacture">Facture</a>
+        <a href="#stats" id="menuStats">Statistiques</a>
     </nav>
 
     <main class="bottom-content">
@@ -66,7 +68,7 @@
         <article class="overlay-content">
             <button class="overlay-close" id="closeAbout" aria-label="Fermer">&times;</button>
             <h2 id="aboutTitle">À propos de CAN</h2>
-            <p class="overlay-description">CAN (Compagnie Atlantique de Navigation) est une entreprise fictive spécialisée dans le transport maritime de passagers et de véhicules le long des côtes bretonnes. Depuis sa création imaginaire en 1985, nous assurons des liaisons régulières entre le continent et les îles du Morbihan.</p>
+            <p class="overlay-description">CAN (Compagnie Alsacienne de Navigation) est une entreprise spécialisée dans le transport maritime de passagers et de véhicules le long des côtes bretonnes. Depuis sa création en 1993, nous assurons des liaisons régulières entre le continent et les îles du Morbihan.</p>
             <p class="overlay-description">Notre flotte comprend plusieurs navires modernes capables de transporter jusqu'à 400 passagers et 80 véhicules par traversée. Nous nous engageons à fournir un service fiable, sûr et confortable pour tous nos clients.</p>
             <p class="overlay-description">Nos destinations principales incluent Groix, Belle-Île-en-Mer, et d'autres îles magnifiques de la région.</p>
         </article>
@@ -166,6 +168,95 @@
                 <p id="errorText">Réservation introuvable</p>
                 <button class="btn-reload" id="btnRetry">Réessayer</button>
             </aside>
+        </article>
+    </aside>
+
+    <aside class="overlay" id="overlayFacture" role="dialog" aria-labelledby="factureTitle" aria-modal="true">
+        <div class="overlay-backdrop" aria-hidden="true"></div>
+        <article class="overlay-content overlay-facture">
+            <button class="overlay-close" id="closeFacture" aria-label="Fermer">&times;</button>
+            <div class="facture-container" id="factureContainer">
+                <h2 id="factureTitle">Facture</h2>
+                <p class="overlay-description">Entrez votre numéro de réservation pour générer votre facture</p>
+                
+                <form class="reservation-input-zone" id="factureInputZone">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="factureIdInput" 
+                            class="reservation-id-input" 
+                            placeholder="Ex: ABC123DEF"
+                            autocomplete="off"
+                        >
+                        <button class="btn btn-primary btn-search" id="btnSearchFacture" type="submit">
+                            Générer
+                        </button>
+                    </div>
+                </form>
+
+                <aside class="loading-spinner" id="factureSpinner" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Génération de la facture...</p>
+                </aside>
+
+                <div class="facture-display" id="factureDisplay" style="display: none;">
+                </div>
+
+                <aside class="error-message" id="factureError" style="display: none;">
+                    <span class="error-icon">⚠</span>
+                    <p id="factureErrorText">Erreur</p>
+                    <button class="btn-reload" id="btnFactureRetry">Réessayer</button>
+                </aside>
+            </div>
+        </article>
+    </aside>
+
+    <aside class="overlay" id="overlayDashboard" role="dialog" aria-labelledby="dashboardTitle" aria-modal="true">
+        <div class="overlay-backdrop" aria-hidden="true"></div>
+        <article class="overlay-content overlay-dashboard">
+            <button class="overlay-close" id="closeDashboard" aria-label="Fermer">&times;</button>
+            <h2 id="dashboardTitle">Tableau de Bord</h2>
+            <div class="dashboard-container" id="dashboardContainer">
+            </div>
+        </article>
+    </aside>
+
+    <aside class="overlay" id="overlayStats" role="dialog" aria-labelledby="statsTitle" aria-modal="true">
+        <div class="overlay-backdrop" aria-hidden="true"></div>
+        <article class="overlay-content overlay-stats">
+            <button class="overlay-close" id="closeStats" aria-label="Fermer">&times;</button>
+            
+            <div class="stats-login" id="statsLogin">
+                <h2 id="statsTitle">Statistiques</h2>
+                <p class="overlay-description">Accès réservé au personnel autorisé</p>
+                <form class="stats-login-form" id="statsLoginForm">
+                    <div class="input-group">
+                        <input 
+                            type="password" 
+                            id="statsPassword" 
+                            class="reservation-id-input" 
+                            placeholder="Mot de passe"
+                            autocomplete="off"
+                        >
+                        <button class="btn btn-primary btn-search" type="submit">
+                            Accéder
+                        </button>
+                    </div>
+                </form>
+                <aside class="error-message" id="statsLoginError" style="display: none;">
+                    <p>Mot de passe incorrect</p>
+                </aside>
+            </div>
+
+            <div class="stats-display" id="statsDisplay" style="display: none;">
+                <h2>Statistiques - Novembre 2025</h2>
+                <aside class="loading-spinner" id="statsSpinner" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Chargement des statistiques...</p>
+                </aside>
+                <div class="stats-container" id="statsContainer">
+                </div>
+            </div>
         </article>
     </aside>
 
