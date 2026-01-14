@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/variables.min.css">
     <link rel="stylesheet" href="css/components.min.css">
 </head>
@@ -56,10 +57,17 @@
             <button class="overlay-close" id="closeAcheter" aria-label="Fermer">&times;</button>
             <h2 id="acheterTitle">Acheter un Billet</h2>
             <p class="overlay-description">Téléchargez notre application pour acheter vos billets de ferry en toute simplicité.</p>
-            <a href="../main/CAN.exe" download class="btn btn-primary btn-download">
-                <span class="download-icon" aria-hidden="true">⬇</span>
-                Télécharger l'application
-            </a>
+            <p class="overlay-description" style="margin-bottom: 2rem;">Choisissez votre plateforme :</p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; max-width: 600px; margin: 0 auto;">
+                <a href="windows-x86-x64.zip" download class="btn btn-primary btn-download" style="flex: 1; min-width: 200px;">
+                    <i class="fa-brands fa-windows" style="font-size: 1.5rem; margin-right: 0.5rem; color: #0078D4;"></i>
+                    Windows
+                </a>
+                <a href="linux.zip" download class="btn btn-primary btn-download" style="flex: 1; min-width: 200px;">
+                    <i class="fa-brands fa-linux" style="font-size: 1.5rem; margin-right: 0.5rem; color: #FCC624;"></i>
+                    Linux
+                </a>
+            </div>
         </article>
     </aside>
 
